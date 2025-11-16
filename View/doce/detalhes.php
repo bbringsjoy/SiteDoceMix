@@ -1,6 +1,6 @@
 <?php 
-    $urlDoces = "link api doces";//ao invés de passar o id, coloque {$id} na url
-    $dadosDoces = json_decode(file_get_contents($urlDoces));
+    $urlDoce = "http://localhost/DoceMix/public/apis/doce.php?id={$id}";//ao invés de passar o id, coloque {$id} na url
+    $dadosDoce = json_decode(file_get_contents($urlDoce));
 
 
 ?>
@@ -8,28 +8,28 @@
 <div class="card">
     <div class="card-header">
         <?php 
-        if(empty($dadosDoces->$id)){
+        if(empty($dadosDoce->$id)){
             echo "<h2> Doce inválido </h2>";
         } else {
-            echo "<h2>{$dadosDoces->nome}</h2>";
+            echo "<h2>{$dadosDoce->nome}</h2>";
         }
         ?>
     </div>
     <div class="card-body">
         <div class="row">
             <div class="col-12 col-md-4">
-                <img src="<?$img?><?=$dadosDoces->imagem ?>" alt="<?=$dadosDoces->nome ?>" class="w-100">
+                <img src="<?$img?><?=$dadosDoce->imagem ?>" alt="<?=$dadosDoce->nome ?>" class="w-100">
             </div>
             <div class="col-12 col-md-8">
                 <strong><p>Informações sobre:</p></strong>
-                <?=$dadosDoces->descricao ?>
+                <?=$dadosDoce->descricao ?>
 
                 <p class="float-end valor">
-                    R$ <?number_format($dadosDoces->valor, 2, ",", ".") ?>
+                    R$ <?number_format($dadosDoce->valor, 2, ",", ".") ?>
                 </p>
 
                 <p class="float-start">
-                    <a href="carrinho/adicionar/<?=$dadosDoces->id?>" class="btn btn-success">
+                    <a href="carrinho/adicionar/<?=$dadosDoce->id?>" class="btn btn-success">
                         <i class="fas fa-cart-plus"></i> Adicionar ao Carrinho
                     </a>
                 </p>

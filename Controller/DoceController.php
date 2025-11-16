@@ -1,11 +1,12 @@
 <?php 
-    class DocesController{
+    class DoceController{
         public function index($id, $img) {
-            include 'View/doces/index.php';
+            include 'View/doce/index.php';
         }
 
         public function detalhes($id, $img) {
-            include 'View/doces/detalhes.php';
+            include 'View/doce/detalhes.php';
         }
+
     }
 ?>

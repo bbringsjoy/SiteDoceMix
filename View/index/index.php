@@ -5,10 +5,10 @@
     <div class="card-body">
         <div class="row">
             <?php 
-            $urlDoces = "link api doces";
-            $dadosDoces = json_decode(file_get_contents($urlDoces));
+            $urlDestaque = "http://localhost/DoceMix/public/apis/destaque.php";
+            $dadosDestaque = json_decode(file_get_contents($urlDoce));
 
-            foreach($dadosDoces as $dados){
+            foreach($dadosDestaque as $dados){
                 ?>
                 <div class="col-12 col-md-3">
                     <div class="card text-center">
@@ -17,7 +17,7 @@
                             <strong><?=$dados->nome ?></strong>
                         </p>
                         <p>
-                            <a href="doces/detalhes/<?=$dados->id ?>" class="btn btn-success">
+                            <a href="doce/detalhes/<?=$dados->id ?>" class="btn btn-success">
                                 <i class="fas fa-search"></i> Ver Detalhes
                         </p>
                     </div>

@@ -43,7 +43,7 @@
                             <a class="nav-link" href="index">Home</a>
                         </li>
                         <?php 
-                            $urlCategoria = "link api categoria";
+                            $urlCategoria = "http://localhost/DoceMix/public/apis/categoria.php";
                             $dadosCategoria = json_decode(file_get_contents($urlCategoria));
 
                             foreach($dadosCategoria as $dados){
@@ -71,26 +71,26 @@
         <main class="container">
             <?php 
                 $param = "index";
-                $img = "caminho pra imagem";
+                $img = "http://localhost/DoceMix/public/arquivos/";
 
-                if(isset($_GET["param"])){
-                    $param = explode("/", $_GET["param"]);
-                }
+            $controller = $_GET["param"] ?? NULL;
+            $param = explode("/", $controller);
 
-                $controller = $param[0] ?? "index";
-                $acao = $param[1] ?? "index";
-                $id = $param[2] ?? null;
+            $controller = $param[0] ?? "index";
+            $acao = $param[1] ?? "index";
+            $id = $param[2] ?? NULL;
 
-                $controller = ucfirst($controller) . "Controller";
+            $controller = ucfirst($controller)."Controller";
+            $page = "../Controller/{$controller}.php";
 
-                if(file_exists("../Controllers/{$controller}.php")){
-                    require "../Controllers/{$controller}.php";
-                    $controller = new $controller();
-                    $control->$acao($id, $img);
+            if (file_exists($page)) {
 
-                } else {
-                    require "../View/indexs/erro.php";
-                }
+                include $page;
+                $control = new $controller();
+                $control->$acao($id);
+
+            } else include "../View/Index/erro.php";
+            
                    
 
             ?>
