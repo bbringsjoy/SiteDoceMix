@@ -73,24 +73,24 @@
                 $param = "index";
                 $img = "http://localhost/DoceMix/public/arquivos/";
 
-            $controller = $_GET["param"] ?? NULL;
-            $param = explode("/", $controller);
+                if(isset($_GET["param"])){
+                    $param = explode("/", $_GET["param"]);
+                }
 
-            $controller = $param[0] ?? "index";
-            $acao = $param[1] ?? "index";
-            $id = $param[2] ?? NULL;
+                $controller = $param[0] ?? "index";
+                $acao = $param[1] ?? "index";
+                $id = $param[2] ?? null;
 
-            $controller = ucfirst($controller)."Controller";
-            $page = "../Controller/{$controller}.php";
+                $controller = ucfirst($controller) . "Controller";
 
-            if (file_exists($page)) {
+                if(file_exists("../Controller/{$controller}.php")){
+                    require "../Controller/{$controller}.php";
+                    $controller = new $controller();
+                    $controller->$acao($id, $img);
 
-                include $page;
-                $control = new $controller();
-                $control->$acao($id);
-
-            } else include "../View/Index/erro.php";
-            
+                } else {
+                    require "../View/index/erro.php";
+                }
                    
 
             ?>
