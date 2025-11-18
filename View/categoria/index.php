@@ -6,7 +6,7 @@
         <div class="row">
             <?php 
             $urlCategoria = "http://localhost/DoceMix/public/apis/categoria.php";
-            $dadosCategoria = json_decode(file_get_contents($urlDoce));
+            $dadosCategoria = json_decode(file_get_contents($urlCategoria));
 
             foreach($dadosCategoria as $dados){
                 ?>

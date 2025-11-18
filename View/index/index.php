@@ -6,7 +6,7 @@
         <div class="row">
             <?php 
             $urlDestaque = "http://localhost/DoceMix/public/apis/destaque.php";
-            $dadosDestaque = json_decode(file_get_contents($urlDoce));
+            $dadosDestaque = json_decode(file_get_contents($urlDestaque));
 
             foreach($dadosDestaque as $dados){
                 ?>
