@@ -1,3 +1,8 @@
+<?php 
+//session_start(); // ESSENCIAL para acessar $_SESSION
+$img = "http://localhost/DoceMix/public/arquivos/";
+?>
+
 <div class="card">
     <div class="card-header">
         <h2>Carrinho de compras</h2>
@@ -29,6 +34,7 @@
             <tbody>
                 <?php
                 $total = 0;
+                
                 if (!empty($_SESSION["carrinho"])) {
                     foreach ($_SESSION["carrinho"] as $dados) {
                         $total = $total + ($dados["qtde"] * $dados["valor"]);
@@ -44,7 +50,7 @@
                             <td><?= number_format($dados["qtde"] * $dados["valor"], 2, ",", ".") ?></td>
                             </td>
                             <td>
-                                <a href="carrinho/excluir/?id=<?= $dados["id"] ?>" class="btn btn-danger">
+                                <a href="carrinho/excluir/<?= $dados["id"] ?>" class="btn btn-danger">
                                     <i class="fas fa-trash"></i>
                                 </a>
                             </td>
@@ -69,6 +75,7 @@
 </div>
 <script>
     somarQuantidade = function(qtde, id) {
+        
         $.get("somar.php", {
             qtde: qtde,
             id: id

@@ -15,8 +15,9 @@ if(!empty($dadosDoce)){
         "valor" => $dadosDoce->valor,
         "imagem" => $dadosDoce->imagem,
         "qtde" => $qtde);
+    
 
-    print_r($_SESSION["carrinho"]);
+    echo "<script>location.href='carrinho';</script>";
 
 } else {
     echo "<h2> Doce inválido </h2>";

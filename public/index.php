@@ -1,3 +1,4 @@
+<?php session_start(); // ESSENCIAL para acessar $_SESSION ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,8 +24,7 @@
     <script src="js/bindings/inputmask.binding.js"></script>
 
     <script src="js/sweetalert2.js"></script>
-    <script src="js/parsley.min.js"></script>
-
+    
 
 </head>
 
@@ -83,7 +83,7 @@
                                 <i class="fas fa-user"></i>
                             </a>
                         </li>
-                        <?
+                        <?php
                     }
                     ?>
                 </ul>
@@ -109,9 +109,9 @@
             require "../Controller/{$controller}.php";
             $controller = new $controller();
             $controller->$acao($id, $img);
-        } /* else {
+        } else {
                     require "../View/index/erro.php";
-                }*/
+                }
 
 
         ?>
