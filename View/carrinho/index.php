@@ -14,7 +14,7 @@ $img = "http://localhost/DoceMix/public/arquivos/";
             echo "<p class='alert alert-success text-center p-2 m-2'>
             Olá {$_SESSION['cliente']['nome']}
 
-            <a href='carrinho/sair'>Sair</a>
+            <a href='carrinho/sair' class='p-2 m-2'> <i class='fas fa-power-off'></i></a>
         </p>
         <br>";
         }

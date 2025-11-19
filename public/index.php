@@ -24,6 +24,8 @@
     <script src="js/bindings/inputmask.binding.js"></script>
 
     <script src="js/sweetalert2.js"></script>
+
+    <script src="js/parsley.min.js"></script>
     
 
 </head>
@@ -79,7 +81,7 @@
                     } else {
                         ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="carrinho/finalizar">
+                            <a class="nav-link" href="carrinho/login">
                                 <i class="fas fa-user"></i>
                             </a>
                         </li>

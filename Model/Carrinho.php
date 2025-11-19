@@ -45,16 +45,27 @@ class Carrinho
 
     public function salvarPedido($preference_id)
     {
-        $sqlPedido = "insert into pedido values(NULL, :cliente_id, NOW(), :preference_id)";
+        // Insere o pedido usando a nova coluna preference_id
+        $sqlPedido = "
+        INSERT INTO pedido (preference_id, cliente_id, data, status)
+        VALUES (:preference_id, :cliente_id, NOW(), 'pendente')
+    ";
+
         $consulta = $this->pdo->prepare($sqlPedido);
-        $consulta->bindParam(":cliente_id", $_SESSION["cliente"]["id"]);
         $consulta->bindParam(":preference_id", $preference_id);
+        $consulta->bindParam(":cliente_id", $_SESSION["cliente"]["id"]);
 
         if ($consulta->execute()) {
+
             $pedido_id = $this->pdo->lastInsertId();
 
+            // salvar itens da compra
             foreach ($_SESSION["carrinho"] as $dados) {
-                $sqlItem = "insert into item values (:pedido_id, :produto_id, :qtde, :valor)";
+                $sqlItem = "
+                INSERT INTO item (pedido_id, produto_id, qtde, valor)
+                VALUES (:pedido_id, :produto_id, :qtde, :valor)
+            ";
+
                 $consultaItem = $this->pdo->prepare($sqlItem);
                 $consultaItem->bindParam(":pedido_id", $pedido_id);
                 $consultaItem->bindParam(":produto_id", $dados["id"]);
@@ -64,13 +75,11 @@ class Carrinho
                 if (!$consultaItem->execute()) return 0;
             }
 
-
+            // esvazia carrinho após salvar
+            unset($_SESSION["carrinho"]);
             return 1;
-        } else {
-            return 0;
         }
-        //pra não dar um looping e salvar dnv, esvazia o carrinho
-        unset($_SESSION["carrinho"]);
-        return 1;
+
+        return 0;
     }
 }

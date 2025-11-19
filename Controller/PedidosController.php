@@ -1,8 +1,8 @@
 <?php
-require "../config/Conexao.php";
-require "../models/Pedidos.php";
+require "../Config/Conexao.php";
+require "../Model/Pedidos.php";
 
-class Pedidos {
+class PedidosController {
     private $pedidos;
 
     public function __construct()

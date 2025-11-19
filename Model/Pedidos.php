@@ -1,6 +1,4 @@
 <?php
-require "../config/Conexao.php";
-require "../models/Pedido.php";
 
 class Pedidos {
     private $pdo;
@@ -24,7 +22,7 @@ class Pedidos {
     public function getItens($pedido)
     {
         $sql = "select p.nome, i.valor, i.qtde from item i 
-                inner join produto p on (p.id = i.produto_id) 
+                inner join doce p on (p.id = i.produto_id) 
                 where i.pedido_id = :pedido 
                 order by p.nome";
         $consulta = $this->pdo->prepare($sql);

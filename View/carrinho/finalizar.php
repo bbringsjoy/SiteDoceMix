@@ -4,7 +4,7 @@ if (!isset($_SESSION["carrinho"])) {
     echo "<script>alert('Carrinho vazio!');history.back();</script>";
 }
 
-$token = ""; //token do mercado pago
+$token = "TEST-2156827143387711-111916-e003623d083222bc38b4f14a67fa0de7-2269138772"; //token do mercado pago
 
     require 'vendor/autoload.php';
 
@@ -56,11 +56,10 @@ $token = ""; //token do mercado pago
 
 ?>
 
-?>
 
 <div class="card">
     <div class="card-header text-center">
-        <img src="../images/mercado-pago-logo.png" alt="Mercado pago" width="350px">
+        <img src="../public/images/mercado-pago-logo.png" alt="Mercado pago" width="350px">
     </div>
     <div class="card-body">
     <p class="text-center">

@@ -31,13 +31,14 @@ class CarrinhoController{
     }
 
     public function finalizar(){
-        if(!isset($_SESSION["cliente"]["id"])){
-            require '../View/carrinho/finalizar.php';
-        } else {
-            require '../View/carrinho/login.php';
-        }
-        
+    // Se o cliente não estiver logado
+    if(!isset($_SESSION["cliente"]["id"])){
+        require '../View/carrinho/login.php';   // manda para login
+    } else {
+        require '../View/carrinho/finalizar.php'; // manda para finalizar compra
     }
+}
+
 
     public function cadastrar(){
         require '../View/carrinho/cadastrar.php';
@@ -52,6 +53,10 @@ class CarrinhoController{
         unset($_SESSION["cliente"]);
         require "../View/carrinho/index.php";
     }
+    public function login($id, $img)
+{
+    require "../View/carrinho/login.php";
+}
 }
 
 

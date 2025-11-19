@@ -36,7 +36,7 @@
         </div>
 
         <p class="text-center mt-3">
-            <a href="doces/index" class="btn btn-success btn-lg">
+            <a href="doce/index" class="btn btn-success btn-lg">
                 <i class="fas fa-search"></i> Ver todos os doces
             </a>
         </p>

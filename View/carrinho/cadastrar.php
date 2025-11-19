@@ -15,7 +15,7 @@ if ($msg == 1) {
     ?>
     <p class="alert alert-success text-center">
         <strong>Pronto!</strong> Seu cadastro foi realizado com sucesso!<br>
-        <a href="carrinho/finalizar">Clique aqui e faça seu login</a>
+        <a href="carrinho/login">Clique aqui e faça seu login</a>
     </p>
     <?php
 } else if ($msg == 0) {
@@ -34,6 +34,4 @@ if ($msg == 1) {
     </p>
 <?php
 }
-?>
-
 ?>
