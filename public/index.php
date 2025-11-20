@@ -120,6 +120,61 @@
 
 
     </main>
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+  <section class="nav-link" style="background-color: var(--maincolor); padding-top: 30px;" >
+    <div class="container text-center text-md-start mt-5">
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fa-solid fa-cookie-bite"></i> Doce Mix
+          </h6>
+          <p>
+            Descubra a nossa coleção de doces artesanais, feitos com amor para celebrar o seu dia!
+          </p>
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            Links Rápidos
+          </h6>
+          <p>
+            <a href="#!" class="text-reset footr">Sobre Nós</a>
+          </p>
+          <p>
+            <a href="Index" class="text-reset footr">Página de Administrador</a>
+          </p>
+        </div>
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            Legal
+          </h6>
+          <p>
+            <a href="#!" class="text-reset footr">Política de Privacidade</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset footr">Termos de Uso</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset footr">Política de Cookies</a>
+          </p>
+        </div>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Contato</h6>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            contato@docemix.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> (44) 9999-9999</p>
+        <p><i class="fas fa-map-marker-alt me-2"></i>Campo Mourão, PR - Brasil</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="text-center p-4 footr" style="background-color: var(--maincolor); ">
+    © 2025 Copyright DoceMix
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
 </body>
 
 </html>

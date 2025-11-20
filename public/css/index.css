@@ -1,3 +1,88 @@
+:root{
+    --white: #ffffff;
+    --black: #000;
+    --maincolor: #3e2311;
+    --thircolor: #f9edb4;
+    --quadcolor: #9e0e0e;
+    --extra: #FF69B4;
+}
+
+.text-maincolor {
+    color: var(--maincolor) !important;
+}
+
+/* Subtítulo (se estiver em um fundo claro, use o marrom escuro) */
+.text-dark-subtitle {
+    color: var(--maincolor) !important; 
+    opacity: 0.8;
+}
+
+/* Título de produto (h5 no card) */
+.text-extra {
+    color: var(--extra) !important;
+}
+
+
+/* 2. Estilo do Card */
+
+.card-doce {
+    background-color: var(--white); /* Fundo branco para os cards */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-doce:hover {
+    transform: translateY(-5px);
+    /* Sombra ligeiramente marrom para combinar */
+    box-shadow: 0 10px 20px rgba(62, 35, 17, 0.25) !important; 
+}
+
+.card-doce .card-img-top {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+
+/* 3. Estilo dos Botões (Usando a cor --extra para ação principal) */
+
+/* Botão principal (Ver Todo o Cardápio) */
+.btn-extra {
+    background-color: var(--extra) !important;
+    border-color: var(--extra) !important;
+    color: var(--white) !important;
+    font-weight: bold;
+}
+
+.btn-extra:hover {
+    background-color: #f0529d !important; /* Rosa um pouco mais escuro no hover */
+    border-color: #f0529d !important;
+}
+
+/* Botão de contorno (Detalhes no Card) */
+.btn-outline-extra {
+    color: var(--extra) !important;
+    border-color: var(--extra) !important;
+    font-weight: 500;
+}
+
+.btn-outline-extra:hover {
+    background-color: var(--extra) !important;
+    color: var(--white) !important;
+}
+
+/* Efeito Pulse (opcional) */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.pulse-effect {
+    animation: pulse 2s infinite;
+}
+
+
 body {
     background-color: #f1f1f1;
     color: #333;
@@ -46,10 +131,30 @@ body {
     margin-top: -15px;
 }
 
-.footer, .navbar {
-    background: #FFF;
-    padding: 10px 0 10px;
-    box-shadow: 0 0 10px #ccc;
+
+.footer {
+    padding: 30px 0;
+    background-color: var(--maincolor);
+    text-align: center;
+    color: var(--thircolor) !important;
+    a {
+        color: var(--thircolor) !important;
+        text-decoration: none !important;
+    }
+}
+
+.footer {
+
+
+
+    a {
+
+
+        margin: 20px;
+        &:hover {
+            color: #F00;
+        }
+    }
 }
 
 
@@ -68,4 +173,33 @@ body {
     transition: 0.3s;
         background: rgb(233, 78, 78) !important;
         box-shadow: 0 0 7px rgb(218, 154, 154);
+}
+
+
+
+.bg-thircolor {
+    background-color: var(--thircolor) !important;
+}
+
+.text-maincolor {
+    color: var(--maincolor) !important;
+}
+
+.text-extra {
+    color: var(--extra) !important;
+}
+
+.feature-box {
+    /* Fundo branco e bordas suaves para destacar cada diferencial */
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    height: 100%; /* Garante que as caixas tenham a mesma altura */
+    transition: transform 0.3s;
+}
+
+/* Efeito sutil ao passar o mouse */
+.feature-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
