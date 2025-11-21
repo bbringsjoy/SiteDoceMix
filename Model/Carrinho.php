@@ -4,7 +4,6 @@ class Carrinho
 {
     private $pdo;
 
-
     public function __construct($pdo)
     {
         $this->pdo = $pdo;
@@ -12,7 +11,8 @@ class Carrinho
 
     public function salvar($dados)
     {
-        $sqlVerifica = "select id from cliente where email = :email limit 1";
+        // verifica se o email já foi cadastrado
+        $sqlVerifica = "SELECT id FROM cliente WHERE email = :email LIMIT 1";
         $consultaVerifica = $this->pdo->prepare($sqlVerifica);
         $consultaVerifica->bindParam(":email", $dados["email"]);
         $consultaVerifica->execute();
@@ -22,20 +22,25 @@ class Carrinho
         if (empty($dadosVerifica->id)) {
             $senha = password_hash($dados["senha"], PASSWORD_BCRYPT);
 
-            $sqlCliente = "insert into cliente values(NULL, :nome, :email, :senha)";
+            $sqlCliente = "
+                INSERT INTO cliente (nome, email, senha)
+                VALUES (:nome, :email, :senha)
+            ";
+
             $consultaCliente = $this->pdo->prepare($sqlCliente);
             $consultaCliente->bindParam(":nome", $dados["nome"]);
             $consultaCliente->bindParam(":email", $dados["email"]);
             $consultaCliente->bindParam(":senha", $senha);
 
             return $consultaCliente->execute();
-        } else {
-            return 2; // já existe e-mail cadastrado
         }
+
+        return 2; // já existe e-mail cadastrado
     }
+
     public function logar($email)
     {
-        $sql = "select * from cliente where email = :email limit 1";
+        $sql = "SELECT * FROM cliente WHERE email = :email LIMIT 1";
         $consulta = $this->pdo->prepare($sql);
         $consulta->bindParam(":email", $email);
         $consulta->execute();
@@ -45,11 +50,10 @@ class Carrinho
 
     public function salvarPedido($preference_id)
     {
-        // Insere o pedido usando a nova coluna preference_id
         $sqlPedido = "
-        INSERT INTO pedido (preference_id, cliente_id, data, status)
-        VALUES (:preference_id, :cliente_id, NOW(), 'pendente')
-    ";
+            INSERT INTO pedido (preference_id, cliente_id, data)
+            VALUES (:preference_id, :cliente_id, NOW())
+        ";
 
         $consulta = $this->pdo->prepare($sqlPedido);
         $consulta->bindParam(":preference_id", $preference_id);
@@ -59,12 +63,13 @@ class Carrinho
 
             $pedido_id = $this->pdo->lastInsertId();
 
-            // salvar itens da compra
+            // Salvar os itens
             foreach ($_SESSION["carrinho"] as $dados) {
+
                 $sqlItem = "
-                INSERT INTO item (pedido_id, produto_id, qtde, valor)
-                VALUES (:pedido_id, :produto_id, :qtde, :valor)
-            ";
+                    INSERT INTO item (pedido_id, produto_id, qtde, valor)
+                    VALUES (:pedido_id, :produto_id, :qtde, :valor)
+                ";
 
                 $consultaItem = $this->pdo->prepare($sqlItem);
                 $consultaItem->bindParam(":pedido_id", $pedido_id);
@@ -75,8 +80,7 @@ class Carrinho
                 if (!$consultaItem->execute()) return 0;
             }
 
-            // esvazia carrinho após salvar
-            unset($_SESSION["carrinho"]);
+            unset($_SESSION["carrinho"]); // limpa carrinho
             return 1;
         }
 
