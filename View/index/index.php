@@ -1,7 +1,7 @@
 <section class="container my-5">
     
 <header class="hero-image-html">
-    <img src="capa.png" alt="DoceMix Capa Principal" class="w-100 hero-img-content">
+    <img src="images/capa.png" alt="DoceMix Capa Principal" class="w-100 hero-img-content">
 </header>
 <section id="destaques" class="container my-5">
     </section>
@@ -19,7 +19,7 @@
         foreach ($dadosDestaque as $dados) {
         ?>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card card-doce h-100 shadow-sm border-0 bg-white">
+                <div class="card card-doce h-100 shadow-sm border-0 bg-white"  style="border-radius:10px">
                     
                     <img src="<?= $img . $dados->imagem ?>" 
                          alt="<?= $dados->nome ?>" 
@@ -30,7 +30,7 @@
                         <h5 class="card-title fw-bold text-extra mb-2"><?= $dados->nome ?></h5>
                         
                         <a href="doce/detalhes/<?= $dados->id ?>" 
-                           class="btn btn-outline-extra mt-auto">
+                           class="btn btnscd btn-outline-extra mt-auto">
                             <i class="fas fa-eye me-2"></i>
                             Detalhes
                         </a>
@@ -43,13 +43,13 @@
         </div>
 
     <div class="text-center mt-5">
-        <a href="doce/index" class="btn btn-extra btn-lg shadow-lg pulse-effect">
+        <a href="doce/index" class="btn btnscd btn-extra btn-lg shadow-lg pulse-effect">
              Ver Todo o Cardápio de Doces
         </a>
     </div>
 </section>
 
-<section class="py-5 bg-thircolor">
+<section class="py-5 bg-thircolor" style="border-radius: 10px;">
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="display-5 fw-bold text-maincolor">Por Que o Sabor da DoceMix é Incomparável?</h2>
@@ -60,7 +60,7 @@
             
             <div class="col-md-4">
                 <div class="feature-box p-4">
-                    <i class="fas fa-seedling display-4 text-extra mb-3"></i> 
+                    <i class="fas fa-seedling display-4 mb-3"></i> 
                     <h3 class="h4 fw-bold text-maincolor">Ingredientes Frescos</h3>
                     <p class="text-maincolor">Utilizamos apenas ingredientes de altíssima qualidade, selecionados diariamente para garantir o frescor e o sabor autêntico.</p>
                 </div>
@@ -68,7 +68,7 @@
 
             <div class="col-md-4">
                 <div class="feature-box p-4">
-                    <i class="fas fa-truck-fast display-4 text-extra mb-3"></i>
+                    <i class="fas fa-truck-fast display-4 mb-3"></i>
                     <h3 class="h4 fw-bold text-maincolor">Entrega Rápida e Segura</h3>
                     <p class="text-maincolor">Seu pedido é tratado com o máximo cuidado e chega até você no tempo ideal, preservando a qualidade e a textura.</p>
                 </div>
@@ -76,7 +76,7 @@
 
             <div class="col-md-4">
                 <div class="feature-box p-4">
-                    <i class="fas fa-hand-holding-heart display-4 text-extra mb-3"></i>
+                    <i class="fas fa-hand-holding-heart display-4 mb-3"></i>
                     <h3 class="h4 fw-bold text-maincolor">Receitas Artesanais</h3>
                     <p class="text-maincolor">Cada doce é feito à mão, seguindo receitas de família com a paixão e o carinho que só a confeitaria tradicional oferece.</p>
                 </div>
@@ -95,7 +95,7 @@
             Explore nosso cardápio completo, feito com os melhores ingredientes e o carinho da DoceMix.
         </p>
         
-        <a href="doce/index" class="btn btn-extra btn-lg shadow-lg pulse-effect mb-3">
+        <a href="doce/index" class="btn btnscd btn-lg shadow-lg pulse-effect mb-3">
             <i class="fas fa-cookie-bite me-2"></i> Ver Cardápio Completo
         </a>
         

@@ -10,15 +10,18 @@
     color: var(--maincolor) !important;
 }
 
+.nav-link {
+    color: var(--thircolor);
+}
+
+.nav-link:hover {
+    color: #f79d54;
+}
+
 /* Subtítulo (se estiver em um fundo claro, use o marrom escuro) */
 .text-dark-subtitle {
     color: var(--maincolor) !important; 
     opacity: 0.8;
-}
-
-/* Título de produto (h5 no card) */
-.text-extra {
-    color: var(--extra) !important;
 }
 
 
@@ -40,34 +43,6 @@
 .card-doce .card-img-top {
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
-}
-
-
-/* 3. Estilo dos Botões (Usando a cor --extra para ação principal) */
-
-/* Botão principal (Ver Todo o Cardápio) */
-.btn-extra {
-    background-color: var(--extra) !important;
-    border-color: var(--extra) !important;
-    color: var(--white) !important;
-    font-weight: bold;
-}
-
-.btn-extra:hover {
-    background-color: #f0529d !important; /* Rosa um pouco mais escuro no hover */
-    border-color: #f0529d !important;
-}
-
-/* Botão de contorno (Detalhes no Card) */
-.btn-outline-extra {
-    color: var(--extra) !important;
-    border-color: var(--extra) !important;
-    font-weight: 500;
-}
-
-.btn-outline-extra:hover {
-    background-color: var(--extra) !important;
-    color: var(--white) !important;
 }
 
 /* Efeito Pulse (opcional) */
@@ -99,22 +74,19 @@ body {
 }
 
 .card {
-    box-shadow: 0 0 10px #ffadad;
+    box-shadow: 0 0 10px var(--maincolor);
+    color: var(--maincolor);
     border-radius: 0;
     margin: 30px 0;
-
     .card-header {
-        border-bottom: 1px solid #ffbcbc;
-        background-color: rgb(255, 237, 237);
-        img {width: 80px;}
+        background-color: var(--maincolor);
+        color: var(--thircolor);
     }
 }
 
 .borderad {
     border-radius: 10px;
 }
-
-
 
 .form-control[readonly] {
     background: #f1f1f1;
@@ -130,9 +102,17 @@ body {
     margin-top: -15px;
 }
 
+.footr {
+    color: var(--thircolor) !important;
+    text-decoration: none !important;
+}
 
-.footer {
-    padding: 30px 0;
+.footr:hover {
+    text-decoration: underline !important;
+}
+
+footer {
+    padding: 30px 0 0 0;
     background-color: var(--maincolor);
     text-align: center;
     color: var(--thircolor) !important;
@@ -142,50 +122,12 @@ body {
     }
 }
 
-.footer {
-
-
-
-    a {
-
-
-        margin: 20px;
-        &:hover {
-            color: #F00;
-        }
-    }
-}
-
-
-
-
-
-.btnsecond {
-    background: rgb(240, 122, 122) !important;
-    color: rgb(255, 255, 255);
-    border: 0 solid black !important;
-    transition: 0.3s;
-}
-
-.btnsecond:hover {
-    box-shadow: 1px solid black;
-    transition: 0.3s;
-        background: rgb(233, 78, 78) !important;
-        box-shadow: 0 0 7px rgb(218, 154, 154);
-}
-
-
-
 .bg-thircolor {
     background-color: var(--thircolor) !important;
 }
 
 .text-maincolor {
     color: var(--maincolor) !important;
-}
-
-.text-extra {
-    color: var(--extra) !important;
 }
 
 .feature-box {
@@ -202,3 +144,71 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
+
+
+
+
+/*botão primário (marrom)*/
+
+.btnprm {
+    background-color: var(--white) !important;
+    color: var(--quadcolor);
+    border: 1px solid var(--quadcolor) !important;
+    transition: all 0.3s;
+}
+
+.btnprm:hover {
+    box-shadow: 1px solid black;
+    transition: 0.3s;
+    color: var(--thircolor) !important;
+    background-color: rgb(104, 11, 11) !important;
+}
+
+/*botão secundário (branco)*/
+
+.btnscd {
+    background-color: var(--maincolor) !important;
+    color: var(--thircolor) !important;
+    border: 0 solid var(--black) !important;
+    transition: 0.3s;
+}
+
+.btnscd:hover {
+    box-shadow: 1px solid black;
+    transition: 0.3s;
+    color: var(--thircolor) !important;
+    background-color: rgb(104, 11, 11) !important;
+}
+
+/*botão terciário (pra fundo escuro)*/
+
+.btntrc {
+    background-color: transparent !important;
+    color: var(--thircolor);
+    border: 1px solid var(--thircolor) !important;
+    transition: 0.3s;
+}
+
+.btntrc:hover {
+    box-shadow: 1px solid var(--thircolor);
+    transition: 0.3s;
+    color: var(--maincolor) !important;
+    background-color: var(--thircolor) !important;
+}
+
+/*botão quaternário (pra fundo escuro)*/
+
+.btnqrt {
+    background-color: var(--thircolor) !important;
+    color: var(--maincolor);
+    border: 1px solid var(--thircolor) !important;
+    transition: 0.3s;
+}
+
+.btnqrt:hover {
+    box-shadow: 1px solid var(--thircolor);
+    transition: 0.3s;
+    color: var(--thircolor) !important;
+    background-color: var(--quadcolor) !important;
+    border: 1px solid var(--quadcolor) !important;
+} 
