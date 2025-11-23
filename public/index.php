@@ -1,4 +1,6 @@
-<?php session_start(); // ESSENCIAL para acessar $_SESSION ?>
+<?php
+session_start(); // ESSENCIAL para acessar $_SESSION
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,14 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doce Mix</title>
     <base href="http://<?= $_SERVER["SERVER_NAME"] . $_SERVER["SCRIPT_NAME"] ?>">
-
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/sweetalert2.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
-    <link href="imagens/logoteste.png" rel="shortcut icon">
+    <link rel="shortcut icon" href="imagens/logoteste.png" >
 
     <script src="js/bootstrap.bundle.min.js"></script>
 
@@ -31,9 +32,12 @@
 </head>
 
 <body>
+  <header style="background-color: var(--maincolor);">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-
+          <a class="navbar-brand" href="index">
+                    <img src="images/logomarrom.png" alt="DoceMix" class="imglogo" width="80px">
+                </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -91,8 +95,9 @@
                 </ul>
             </div>
         </div>
-    </nav>
-    <main class="container">
+      </nav>
+    </header>
+      <main class="container">
         <?php
         $param = "index";
         $img = "http://localhost/DoceMix/public/arquivos/";
@@ -120,7 +125,7 @@
 
 
     </main>
-    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+    <footer class="text-center text-lg-start bg-body-tertiary">
   <section class="nav-link" style="background-color: var(--maincolor); padding-top: 30px;" >
     <div class="container text-center text-md-start mt-5">
       <div class="row mt-3">
@@ -169,7 +174,7 @@
       </div>
     </div>
   </section>
-  <div class="text-center p-4 footr" style="background-color: var(--maincolor); ">
+  <div class="text-center p-4" style="background-color: var(--maincolor); ">
     © 2025 Copyright DoceMix
   </div>
   <!-- Copyright -->
