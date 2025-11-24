@@ -20,7 +20,7 @@ $dadosDoce = json_decode(file_get_contents($urlDoce));
             <div class="col-12 col-md-4">
                 <img src="<?= $img . $dadosDoce->imagem ?>" 
                      alt="<?= $dadosDoce->nome ?>" 
-                     class="w-100">
+                     class="w-100" style="border: 1px solid var(--maincolor); border-radius:15px; box-shadow: 0 0 10px var(--maincolor);">
             </div>
 
             <div class="col-12 col-md-8">
@@ -33,7 +33,7 @@ $dadosDoce = json_decode(file_get_contents($urlDoce));
 
                 <p class="float-start">
                     <a href="carrinho/adicionar/<?= $dadosDoce->id ?>" 
-                       class="btn btn-success">
+                       class="btn btnscd btn-success">
                         <i class="fas fa-cart-plus"></i> Adicionar ao Carrinho
                     </a>
                 </p>

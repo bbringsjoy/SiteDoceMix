@@ -1,5 +1,5 @@
 <div class="card">
-    <div class="card-header">
+    <div class="card-header" style="font-family:roboto">
         <h1>Faça seu Login ou Cadastre-se</h1>
     </div>
     <div class="card-body">
@@ -18,7 +18,7 @@
                         data-parsley-minlength-message="Digite mais de 6 caracteres">
 
                     <br>
-                    <button type="submit" class="btn btn-success">
+                    <button type="submit" class="btn btnscd btn-success">
                         Efetuar Login
                     </button>
                 </form>
@@ -47,7 +47,7 @@
                         data-parsley-equalto-message="As senhas digitadas são diferentes">
 
                     <br>
-                    <button type="submit" class="btn btn-success">
+                    <button type="submit" class="btn btnscd btn-success">
                         Efetuar Cadastro
                     </button>
                 </form>

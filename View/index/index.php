@@ -60,7 +60,7 @@
             
             <div class="col-md-4">
                 <div class="feature-box p-4">
-                    <i class="fas fa-seedling display-4 mb-3"></i> 
+                    <i class="fas fa-seedling mb-3" style="font-size: 45px; color: var(--maincolor)"></i> 
                     <h3 class="h4 fw-bold text-maincolor">Ingredientes Frescos</h3>
                     <p class="text-maincolor">Utilizamos apenas ingredientes de altíssima qualidade, selecionados diariamente para garantir o frescor e o sabor autêntico.</p>
                 </div>
@@ -68,7 +68,7 @@
 
             <div class="col-md-4">
                 <div class="feature-box p-4">
-                    <i class="fas fa-truck-fast display-4 mb-3"></i>
+                    <i class="fas fa-truck-fast mb-3" style="font-size: 45px; color: var(--maincolor)"></i>
                     <h3 class="h4 fw-bold text-maincolor">Entrega Rápida e Segura</h3>
                     <p class="text-maincolor">Seu pedido é tratado com o máximo cuidado e chega até você no tempo ideal, preservando a qualidade e a textura.</p>
                 </div>
@@ -76,7 +76,7 @@
 
             <div class="col-md-4">
                 <div class="feature-box p-4">
-                    <i class="fas fa-hand-holding-heart display-4 mb-3"></i>
+                    <i class="fas fa-hand-holding-heart mb-3" style="font-size: 45px; color: var(--maincolor)"></i>
                     <h3 class="h4 fw-bold text-maincolor">Receitas Artesanais</h3>
                     <p class="text-maincolor">Cada doce é feito à mão, seguindo receitas de família com a paixão e o carinho que só a confeitaria tradicional oferece.</p>
                 </div>

@@ -50,7 +50,7 @@ $img = "http://localhost/DoceMix/public/arquivos/";
                             <td><?= number_format($dados["qtde"] * $dados["valor"], 2, ",", ".") ?></td>
                             </td>
                             <td>
-                                <a href="carrinho/excluir/<?= $dados["id"] ?>" class="btn btn-danger">
+                                <a href="carrinho/excluir/<?= $dados["id"] ?>" class="btn btnscd btn-danger">
                                     <i class="fas fa-trash"></i>
                                 </a>
                             </td>
@@ -62,10 +62,10 @@ $img = "http://localhost/DoceMix/public/arquivos/";
             </tbody>
         </table>
         <p class="float-start">
-            <a href="carrinho/limpar" class="btn btn-warning">
+            <a href="carrinho/limpar" class="btn btnprm btn-warning">
                 Limpar Carrinho de Compras
             </a>
-            <a href="carrinho/finalizar" class="btn btn-success">
+            <a href="carrinho/finalizar" class="btn btnscd btn-success">
                 Finalizar Compra
             </a>
         </p>

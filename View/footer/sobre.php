@@ -11,7 +11,7 @@
 
     .intro-sobre {
         background: var(--maincolor);
-        color: var(--white);
+        color: var(--thircolor);
         padding: 20px 25px;
         border-radius: 12px;
         font-size: 1.15rem;
@@ -24,6 +24,7 @@
     .card-sobre {
         background: #fff;
         border-radius: 14px;
+        font-family: roboto;
         padding: 30px;
         border: 1px solid #eee;
         transition: 0.25s ease;
