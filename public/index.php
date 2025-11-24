@@ -153,13 +153,13 @@ session_start(); // ESSENCIAL para acessar $_SESSION
             Legal
           </h6>
           <p>
-            <a href="#!" class="text-reset footr">Política de Privacidade</a>
+            <a href="view/footer/politica.php" class="text-reset footr">Política de Privacidade</a>
           </p>
           <p>
-            <a href="#!" class="text-reset footr">Termos de Uso</a>
+            <a href="view/footer/termos.php" class="text-reset footr">Termos de Uso</a>
           </p>
           <p>
-            <a href="#!" class="text-reset footr">Política de Cookies</a>
+            <a href="view/footer/politicacookies.php" class="text-reset footr">Política de Cookies</a>
           </p>
         </div>
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
