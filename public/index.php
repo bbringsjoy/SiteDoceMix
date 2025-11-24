@@ -126,7 +126,7 @@ session_start(); // ESSENCIAL para acessar $_SESSION
 
     </main>
     <footer class="text-center text-lg-start bg-body-tertiary">
-  <section class="nav-link" style="background-color: var(--maincolor); padding-top: 30px;" >
+ <section class="nav-link" style="background-color: var(--maincolor); padding-top: 30px; color:var(--thircolor) !important" >
     <div class="container text-center text-md-start mt-5">
       <div class="row mt-3">
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
