@@ -14,7 +14,7 @@ foreach ($listaCategorias as $cat) {
 }
 
 // Agora pegar os produtos da categoria
-$urlDoceCategoria = "http://localhost/DoceMix/public/apis/doceCategoria.php?id=" . $id;
+$urlDoceCategoria = "http://localhost/DoceMix/public/apis/doce.php?categoria=" . $id;
 $dadosCategoria = json_decode(file_get_contents($urlDoceCategoria));
 ?>
 

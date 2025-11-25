@@ -120,7 +120,6 @@ session_start(); // ESSENCIAL para acessar $_SESSION
                     require "../View/index/erro.php";
                 }
 
-
         ?>
 
 
