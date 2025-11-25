@@ -35,7 +35,7 @@ $dadosCategoria = json_decode(file_get_contents($urlDoceCategoria));
 
                         <p>
                             <a href="doce/detalhes/<?= $dados->id ?>" 
-                               class="btn btn-success">
+                               class="btn btnscd btn-success">
                                Ver Detalhes
                             </a>
                         </p>
